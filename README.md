@@ -189,7 +189,7 @@ Copyright (C) 2025 vosteam Organization
 ## 📞 Контакты
 
 - **GitHub**: [vosteam/vos9-dos](https://github.com/vosteam/vos9-dos) (если доступно)
-- **Email**: team@vosteam.org
+- **Email**: v@vos9.su
 - **Документация**: Смотрите файлы в этом репозитории
 
 ---
