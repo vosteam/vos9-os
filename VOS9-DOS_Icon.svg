@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Определение стилей -->
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#000080;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#000040;stop-opacity:1" />
+    </linearGradient>
+    
+    <style>
+      .icon-text {
+        font-family: 'Courier New', monospace;
+        font-weight: bold;
+        fill: #00FF00;
+      }
+    </style>
+  </defs>
+  
+  <!-- Фон -->
+  <rect width="64" height="64" fill="url(#bgGrad)" rx="8" ry="8"/>
+  
+  <!-- Рамка -->
+  <rect x="2" y="2" width="60" height="60" stroke="#00FF00" stroke-width="1" fill="none" rx="6" ry="6"/>
+  
+  <!-- Текст VOS9 -->
+  <text x="32" y="25" text-anchor="middle" class="icon-text" font-size="10">VOS9</text>
+  
+  <!-- Линия -->
+  <line x1="16" y1="32" x2="48" y2="32" stroke="#FFFFFF" stroke-width="1"/>
+  
+  <!-- Текст DOS -->
+  <text x="32" y="45" text-anchor="middle" class="icon-text" font-size="10">DOS</text>
+  
+  <!-- Версия -->
+  <text x="32" y="58" text-anchor="middle" fill="#AAAAAA" font-size="6">v1.0</text>
+  
+  <!-- Угловые точки -->
+  <circle cx="8" cy="8" r="1" fill="#00FF00"/>
+  <circle cx="56" cy="8" r="1" fill="#00FF00"/>
+  <circle cx="8" cy="56" r="1" fill="#00FF00"/>
+  <circle cx="56" cy="56" r="1" fill="#00FF00"/>
+</svg>

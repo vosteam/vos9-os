@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Определение стилей и градиентов -->
+  <defs>
+    <!-- Градиент для фона -->
+    <linearGradient id="backgroundGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#000080;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#000040;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Градиент для текста VOS9 -->
+    <linearGradient id="vos9Gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00FF00;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FFFF00;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00FF00;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Градиент для DOS -->
+    <linearGradient id="dosGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#FF8000;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFFF00;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Эффект свечения -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Шрифт для DOS стиля -->
+    <style>
+      .dos-font {
+        font-family: 'Courier New', monospace;
+        font-weight: bold;
+      }
+      .retro-border {
+        stroke: #00FF00;
+        stroke-width: 2;
+        fill: none;
+      }
+    </style>
+  </defs>
+  
+  <!-- Фон -->
+  <rect width="400" height="200" fill="url(#backgroundGradient)" rx="10" ry="10"/>
+  
+  <!-- Внешняя рамка в стиле DOS -->
+  <rect x="5" y="5" width="390" height="190" class="retro-border" rx="5" ry="5"/>
+  <rect x="10" y="10" width="380" height="180" class="retro-border" rx="3" ry="3"/>
+  
+  <!-- Декоративные элементы - имитация ASCII арта -->
+  <text x="20" y="35" fill="#00FF00" class="dos-font" font-size="8">
+    ╔═══════════════════════════════════════════════╗
+  </text>
+  <text x="20" y="175" fill="#00FF00" class="dos-font" font-size="8">
+    ╚═══════════════════════════════════════════════╝
+  </text>
+  
+  <!-- Основной текст VOS9 -->
+  <text x="50" y="80" fill="url(#vos9Gradient)" class="dos-font" font-size="36" filter="url(#glow)">
+    VOS9
+  </text>
+  
+  <!-- Тире -->
+  <line x1="190" y1="70" x2="210" y2="70" stroke="#FFFFFF" stroke-width="4"/>
+  
+  <!-- Текст DOS -->
+  <text x="220" y="80" fill="url(#dosGradient)" class="dos-font" font-size="36" filter="url(#glow)">
+    DOS
+  </text>
+  
+  <!-- Подзаголовок -->
+  <text x="80" y="110" fill="#FFFFFF" class="dos-font" font-size="12">
+    Retro Operating System
+  </text>
+  
+  <!-- Версия -->
+  <text x="155" y="130" fill="#AAAAAA" class="dos-font" font-size="10">
+    Version 1.0
+  </text>
+  
+  <!-- Год и организация -->
+  <text x="120" y="150" fill="#888888" class="dos-font" font-size="8">
+    © 2025 vosteam Organization
+  </text>
+  
+  <!-- Декоративные точки в углах -->
+  <circle cx="30" cy="50" r="2" fill="#00FF00"/>
+  <circle cx="370" cy="50" r="2" fill="#00FF00"/>
+  <circle cx="30" cy="160" r="2" fill="#00FF00"/>
+  <circle cx="370" cy="160" r="2" fill="#00FF00"/>
+  
+  <!-- Имитация мигающего курсора -->
+  <rect x="340" y="140" width="8" height="12" fill="#FFFFFF">
+    <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+  </rect>
+  
+  <!-- Дополнительные декоративные элементы -->
+  <g stroke="#004000" stroke-width="1" opacity="0.5">
+    <line x1="40" y1="45" x2="360" y2="45"/>
+    <line x1="40" y1="155" x2="360" y2="155"/>
+  </g>
+  
+  <!-- Маленькие пиксельные квадратики для ретро-эффекта -->
+  <g fill="#008000" opacity="0.3">
+    <rect x="50" y="95" width="2" height="2"/>
+    <rect x="55" y="95" width="2" height="2"/>
+    <rect x="320" y="95" width="2" height="2"/>
+    <rect x="325" y="95" width="2" height="2"/>
+    <rect x="330" y="95" width="2" height="2"/>
+  </g>
+</svg>
