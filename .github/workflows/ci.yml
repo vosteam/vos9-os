@@ -1,11 +1,11 @@
-name: CI
+name: CI + Release
 
 on:
   push:
     branches:
       - "**"
     tags:
-      - 'v*'
+      - 'v*'          # любые теги вида v1.0.0, v2.1.3 и т.п.
   pull_request:
     branches:
       - "**"
@@ -13,23 +13,24 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    outputs:
+      artifact-name: vos9-os-build
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Install dependenciesы
+      - name: Install dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y build-essential nasm gcc-multilib grub-pc-bin xorriso mtools
 
       - name: Build project
-        run: make
-
+        run: make 
+        
       - name: Build ISO
         run: make iso
-
-      - name: Upload build artifacts
+        
+      - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
           name: vos9-os-build
@@ -39,13 +40,13 @@ jobs:
             build/*.img
             build/*.iso
 
-release:
+  release:
     needs: build
     if: startsWith(github.ref, 'refs/tags/v')
     runs-on: ubuntu-latest
     steps:
       - name: Download build artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: vos9-os-build
 
